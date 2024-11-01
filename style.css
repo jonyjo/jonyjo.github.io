@@ -103,7 +103,7 @@ section .signin .content .form .inputBox
   position: relative;
   width: 100%;
 }
-section .signin .content .form .inputBox button
+section .signin .content .form .inputBox input
 {
   position: relative;
   width: 100%;
@@ -126,8 +126,8 @@ section .signin .content .form .inputBox i
   transition: 0.5s;
   pointer-events: none;
 }
-.signin .content .form .inputBox button:focus ~ i,
-.signin .content .form .inputBox button:valid ~ i
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i
 {
   transform: translateY(-7.5px);
   font-size: 0.8em;
@@ -150,7 +150,7 @@ section .signin .content .form .inputBox i
   color: rgb(192, 19, 215);
   font-weight: 600;
 }
-.signin .content .form .inputBox button[type="submit"]
+.signin .content .form .inputBox input[type="submit"]
 {
   padding: 10px;
   background: rgb(226, 76, 6);
@@ -160,7 +160,7 @@ section .signin .content .form .inputBox i
   letter-spacing: 0.05em;
   cursor: pointer;
 }
-button[type="submit"]:active
+input[type="submit"]:active
 {
   opacity: 0.6;
 }
@@ -179,4 +179,16 @@ button[type="submit"]:active
     width: calc(20vw - 2px);
     height: calc(20vw - 2px);
   }
+}
+
+.btn3d.btn-magick {
+	color: #fff;
+	box-shadow: 0 0 0 1px #8ccd00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #aed523, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color: #73d739;
+}
+
+.btn3d.btn-magick:active,
+.btn3d.btn-magick.active {
+	box-shadow: 0 0 0 1px #41cd00 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(7, 114, 202, 0.3);
+	background-color: #6bd739;
 }
