@@ -194,7 +194,7 @@ input[type="submit"]:active
 
 .btn3d:active:focus,
 .btn3d:focus:hover,
-.btn3d:focus {	outline-style: auto ;-moz-outline-style: none;	outline: medium none;}
+.btn3d:focus {	-moz-outline-style: none;	outline: medium none;}
 
 .btn3d:active,
 .btn3d.active {
