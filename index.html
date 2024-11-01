@@ -6,11 +6,25 @@
 
   <meta charset="UTF-8">
 
-  <title>CodePen - Animated Login Form using Html &amp; CSS Only</title>
+  <title>My codespace </title>
   <link rel="icon" href="favicon.ico?" type="image/x-icon" />
 
   <link rel="stylesheet" href="./style.css">
+  <script>
+    // Function to handle the form submission
+    function handleLogin() {
+        // Read the values of username and password
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
 
+        // You can add your validation or authentication logic here
+        console.log("Username:", username);
+        console.log("Password:", password);
+
+        // Navigate to a new page (change 'newpage.html' to your desired page)
+        window.location.href = "newpage.html";
+    }
+</script>
  </head>
 
  <body> <!-- partial:index.partial.html -->
