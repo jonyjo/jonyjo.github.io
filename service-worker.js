@@ -8,38 +8,46 @@ const urlsToCache = [
     '/favicon.ico'
 ];
 
-// Install the service worker and cache resources
-self.addEventListener('install', event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => {
-                return cache.addAll(urlsToCache);
-            })
-    );
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache).then(() => {
+        self.skipWaiting();
+      });
+    })
+  );
 });
 
-// Fetch resources from cache or network
-self.addEventL,istener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                // Return cached response if available
-                return response || fetch(event.request);
-            })
-    );
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request, { ignoreSearch: true }).then((response) => {
+      return response || (event.request.url.startsWith(self.location.origin) ? fetch(event.request) : caches.match('offline'));
+    })
+  );
 });
 
-// Activate the service worker and clean up old caches
-self.addEventListener('activate', event => {
-    event.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames.map(cacheName => {
-                    if (cacheName !== CACHE_NAME) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
         })
-    );
+      );
+    })
+  );
+});
+
+// Add event listener for push notifications (optional)
+self.addEventListener('push', (event) => {
+  console.log('Received push notification');
+  // Handle push notification
+});
+
+// Add event listener for notification click (optional)
+self.addEventListener('notificationclick', (event) => {
+  console.log('Notification clicked');
+  // Handle notification click
 });
