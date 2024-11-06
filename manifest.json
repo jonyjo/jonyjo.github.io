@@ -6,7 +6,7 @@
         "src": "/favicon.ico",
         "sizes": "16x16",
         "type": "image/x-icon",
-        "purpose": "maskable any"
+        "purpose": "any"
       }
     ],
     "start_url": "/",
