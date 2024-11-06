@@ -9,6 +9,24 @@
         "purpose": "any"
       }
     ],
+    "screenshots": [    
+   {
+
+     "src": "Screenshot_1.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Application1"
+    },
+    {
+
+      "src": "Screenshot_2.png",
+       "sizes": "1920x1080",
+       "type": "image/png",
+       "form_factor": "narrow",
+       "label": "Application2"
+     }
+    ],
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
