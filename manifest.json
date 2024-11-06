@@ -5,7 +5,8 @@
       {
         "src": "/favicon.ico",
         "sizes": "16x16",
-        "type": "image/x-icon"
+        "type": "image/x-icon",
+        "purpose": "maskable any"
       }
     ],
     "start_url": "/",
