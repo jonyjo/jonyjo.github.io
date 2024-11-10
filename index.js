@@ -7,7 +7,7 @@ loginForm.addEventListener("submit", (e) => {
 
   // Simple authentication logic
   if (username === "admin" && password === "admin) {
-    window.open("newpage.html", "_self");
+    window.location.href("newpage.html", "_self");
   } else {
     alert("Invalid username or password");
   }
