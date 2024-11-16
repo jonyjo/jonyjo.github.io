@@ -1,67 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Code Scanner</title>
-  <link rel="icon" href="favicon.png?" type="image/png" />
-  <script src="https://cdn.jsdelivr.net/npm/qr-scanner@1.3.0/qr-scanner.min.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    #scanner-container {
-      margin-top: 20px;
-      position: relative;
-    }
-    video {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-    }
-    #output {
-      margin-top: 20px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      background-color: #f4f4f4;
-    }
-  </style>
-</head>
-<body>
+<!-- Index.html file --><!DOCTYPE html><html lang="en"><head>
 
-  <h1>QR Code Scanner</h1>
-  
-  <div id="scanner-container">
-    <video id="qr-video" width="500" height="400"></video>
-  </div>
-  
-  <div id="output">
-    <h2>Decoded QR Code:</h2>
-    <p id="qr-result">Scan a QR code to see the result here.</p>
-  </div>
+    <meta charset="UTF-8">
 
-  <script>
-    // Access the video element
-    const video = document.getElementById('qr-video');
-    const output = document.getElementById('qr-result');
-    
-    // Initialize QR scanner
-    const qrScanner = new QrScanner(video, (result) => {
-      output.textContent = `QR Code Data: ${result}`;
-      qrScanner.stop(); // Stop scanning once a QR code is detected
-    });
+    <meta name="viewport"
 
-    // Start scanning when the page loads
-    window.onload = () => {
-      qrScanner.start();
-    };
+          content="width=device-width, initial-scale=1.0">
 
-    // Stop scanning when the user clicks anywhere
-    video.addEventListener('click', () => {
-      qrScanner.stop();
-    });
-  </script>
+    <link rel="stylesheet"
 
-</body>
-</html>
+          href="newpage.css">
+
+    <title>QR Code Scanner / Reader
+
+    </title></head><body>
+
+    <div class="container">
+
+        <h1>Scan QR Codes</h1>
+
+        <div class="section">
+
+            <div id="my-qr-reader">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script
+
+        src="https://unpkg.com/html5-qrcode">    </script>
+
+    <script src="newpage.js"></script></body></html>
