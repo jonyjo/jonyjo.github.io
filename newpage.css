@@ -1,85 +1,142 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh; /* Ensures content fills viewport height */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Subtle gradient background */
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 0;
+
+    padding: 0;
+
+    height: 100vh;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: rgb(128 0 0 / 66%);
+
 }
 
 .container {
-  width: 100%;
-  max-width: 800px; /* Adjust max-width for different screen sizes */
-  padding: 20px;
-  margin: 0 auto; /* Center container horizontally */
-  border-radius: 5px; /* Add subtle rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  background-color: #fff; /* White background for content */
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 5px;
+
 }
+
+
 
 .container h1 {
-  color: #333; /* Darker text color */
-  font-size: 2rem; /* Increase heading size */
-  margin-bottom: 15px; /* Add spacing after heading */
+
+    color: #ffffff;
+
 }
+
+
 
 .section {
-  padding: 30px;
-  border: none; /* Remove border as we have container border */
-  border-radius: inherit; /* Inherit rounded corners from container */
-  box-shadow: inherit; /* Inherit container shadow */
+
+    background-color: #ffffff;
+
+    padding: 50px 30px;
+
+    border: 1.5px solid #b2b2b2;
+
+    border-radius: 0.25em;
+
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+
 }
+
+
 
 #my-qr-reader {
-  padding: 20px;
-  background-color: #f5f5f5; /* Light gray background */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 5px;
+
+    padding: 20px !important;
+
+    border: 1.5px solid #b2b2b2 !important;
+
+    border-radius: 8px;
+
 }
 
-#my-qr-reader img {
-  width: 100%; /* Ensure image fills container width */
-  border-radius: 5px; /* Rounded corners for image */
+
+
+#my-qr-reader img[alt="Info icon"] {
+
+    display: none;
+
 }
+
+
+
+#my-qr-reader img[alt="Camera based scan"] {
+
+    width: 100px !important;
+
+    height: 100px !important;
+
+}
+
+
 
 button {
-  padding: 12px 25px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #007bff; /* Blue button color */
-  transition: all 0.3s ease-in-out;
+
+    padding: 10px 20px;
+
+    border: 1px solid #b2b2b2;
+
+    outline: none;
+
+    border-radius: 0.25em;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+    margin-bottom: 10px;
+
+    background-color: #008000ad;
+
+    transition: 0.3s background-color;
+
 }
+
+
 
 button:hover {
-  background-color: #0069d9; /* Darker blue on hover */
+
+    background-color: #008000;
+
 }
+
+
 
 #html5-qrcode-anchor-scan-type-change {
-  text-decoration: none;
-  color: #333; /* Darker text color for link */
-  font-weight: bold; /* Make link text bolder */
+
+    text-decoration: none !important;
+
+    color: #1d9bf0;
+
 }
+
+
 
 video {
-  width: 100%;
-  border-radius: 5px; /* Rounded corners for video */
+
+    width: 100% !important;
+
+    border: 1px solid #b2b2b2 !important;
+
+    border-radius: 0.25em;
+
 }
 
-/* Media queries for responsive design */
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 90%; /* Adjust max-width for smaller screens */
-  }
-
-  .container h1 {
-    font-size: 1.5rem; /* Reduce heading size on smaller screens */
-  }
-}
