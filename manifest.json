@@ -3,7 +3,7 @@
     "short_name": "My PWA",
     "icons": [
       {
-        "src": "/favicon.png",
+        "src": "/qr-code.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any"
