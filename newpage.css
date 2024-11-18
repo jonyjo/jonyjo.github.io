@@ -70,3 +70,15 @@ video {
     border: 1px solid #b2b2b2 !important;
     border-radius: 0.25em;
 }
+
+.alert {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.alert sl-copy-button {
+  margin-left: 10px;
+}
