@@ -29,7 +29,7 @@ domReady(function () {
         alertContainer.appendChild(copyButton);
 
         document.body.appendChild(alertContainer); // Insert after body for better layout
-      }
+     
     }
 
     let htmlscanner = new Html5QrcodeScanner(
