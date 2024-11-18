@@ -72,13 +72,18 @@ video {
 }
 
 .alert {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: #ffdddd; /* Light red for alert background */
+  border: 1px solid #ff0000; /* Red border */
   padding: 10px;
   margin-bottom: 10px;
 }
 
-.alert sl-copy-button {
-  margin-left: 10px;
+sl-copy-button {
+  /* Customize button appearance as needed */
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
