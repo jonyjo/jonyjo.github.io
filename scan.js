@@ -24,7 +24,7 @@ domReady(function () {
 
     // Create a text element for the copy label
     const copyLabel = document.createElement('span');
-    copyLabel.textContent = 'Click to copy QR code's embedded data: ';
+    copyLabel.textContent = "Click to copy QR code's embedded data: ";
 
     // Append both copy label and button to the alert element
     alertElement.appendChild(copyLabel);
