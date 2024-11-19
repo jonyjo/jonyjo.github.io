@@ -39,6 +39,6 @@ domReady(function () {
         "my-qr-reader",
         { fps: 10, qrbos: 250 }
     );
-});
+
     htmlscanner.render(onScanSuccess);
 });
