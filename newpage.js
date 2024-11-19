@@ -22,7 +22,12 @@ domReady(function () {
     copyButton.copyLabel = 'Copied!'; // Shoelace default copy success message
     copyButton.errorLabel = 'Whoops, copying not supported!';
 
-    // Append copy button to the alert element
+    // Create a text element for the copy label
+    const copyLabel = document.createElement('span');
+    copyLabel.textContent = 'Click to copy QR code: ';
+
+    // Append both copy label and button to the alert element
+    alertElement.appendChild(copyLabel);
     alertElement.appendChild(copyButton);
 
     // Position the alert box at the top center of the screen
