@@ -9,27 +9,36 @@ function domReady(fn) {
     }
 }
 domReady(function () {
-  function onScanSuccess(decodeText, decodeResult) {
-    const alertElement = document.createElement('div');
-    alertElement.classList.add('alert'); // Add CSS class for styling (optional)
-    alertElement.textContent = `You scanned QR code: ${decodeText}`;
+    function onScanSuccess(decodeText, decodeResult) {
+        const alertElement = document.createElement('div');
+        alertElement.classList.add('alert');
 
-    // Create a copy button element with Shoelace styles
-    const copyButton = document.createElement('sl-copy-button');
-    copyButton.value = decodeText;
-    copyButton.copyLabel = 'Click to copy QR code';
-    copyButton.successLabel = 'Copied!';
-    copyButton.errorLabel = 'Whoops, copying not supported!';
+        // Create a copy button element with Shoelace styles
+        const copyButton = document.createElement('sl-copy-button');
+        copyButton.value = decodeText;
+        copyButton.copyLabel = 'Click to copy QR code';
+        copyButton.successLabel = 'Copied!';
+        copyButton.errorLabel = 'Whoops, copying not supported!';
 
-    // Append copy button to the alert element
-    alertElement.appendChild(copyButton);
+        // Append copy button to the alert element
+        alertElement.appendChild(copyButton);
 
-    // Display the alert with copy button
-    document.body.appendChild(alertElement);
-  }
-    let htmlscanner = new Html5QrcodeScanner(
-        "my-qr-reader",
-        { fps: 10, qrbos: 250 }
-    );
+        // Position the alert box at the top center of the screen
+        alertElement.style.position = 'fixed';
+        alertElement.style.top = '10px';
+        alertElement.style.left = '50%';
+        alertElement.style.transform = 'translateX(-50%)';
+
+        // Add a hanging effect using CSS animation
+        alertElement.classList.add('hanging-alert');
+
+        document.body.appendChild(alertElement);
+    }
+
+    let htmlscanner = new Html5QrcodeScanner(
+        "my-qr-reader",
+        { fps: 10, qrbos: 250 }
+    );
+});
     htmlscanner.render(onScanSuccess);
 });
