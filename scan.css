@@ -71,7 +71,11 @@ button:hover {
 
 #html5-qrcode-anchor-scan-type-change {
     text-decoration: none !important;
-    color: #1d9bf0;
+    color: black;
+}
+
+#html5-qrcode-button-camera-permission{
+    background-color: inherit;
 }
 
 video {
