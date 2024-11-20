@@ -1,24 +1,33 @@
 
-body {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    box-sizing: border-box;
-    text-align: center;
-    background: rgb(128 0 0 / 66%);
-}
-.container {
-    width: 100%;
-    max-width: 500px;
-    margin: 5px;
-}
+      font-family: 'Roboto', sans-serif;
+      background :linear-gradient(45deg, #06c8ef 0% 10%, black 10% 12% , #1396b7 12% 13%,#eeff00 13% 14%,black 14% 16%,#1396b7 16% 18%,black 18% 22%,#1396b7 22% 26%,black 26% 27%,#1396b7 27% 29%,black 29% 31%,#1396b7 31% 65%,black 65% 65.5% ,#eeff00 66% 67% ,black 67% 68%,#eeff00 68% 70%,black 70% 71%,#eeff00 71% 85%,black 85% 86%, #eeff00 86% 100%);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-.container h1 {
-    color: #ffffff;
-}
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 50px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      max-width: 400px;
+      width: 100%;
+    }
 
+    .container h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
 .section {
     background-color: #ffffff;
     padding: 50px 30px;
