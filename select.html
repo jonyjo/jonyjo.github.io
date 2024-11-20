@@ -4,83 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Scan/Generate </title>
- <link rel="manifest" href="manifest.json">
- <link rel="icon" href="qr-code.png" type="image/png" />
-  <style>body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin:   
- 0;
-}
+  <title>Select Scan/Generate</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="qr-code.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background :linear-gradient(45deg, #06c8ef 0% 10%, black 10% 12% , #1396b7 12% 13%,#eeff00 13% 14%,black 14% 16%,#1396b7 16% 18%,black 18% 22%,#1396b7 22% 26%,black 26% 27%,#1396b7 27% 29%,black 29% 31%,#1396b7 31% 65%,black 65% 65.5% ,#eeff00 66% 67% ,black 67% 68%,#eeff00 68% 70%,black 70% 71%,#eeff00 71% 85%,black 85% 86%, #eeff00 86% 100%);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-.container {
-  background-color: #fff;
-  padding: 40px;
-  border-radius:   
- 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 1s;
-}
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 50px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      max-width: 400px;
+      width: 100%;
+    }
 
-.container h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+    .container h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
 
-.options {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-.options a {
-  display: block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  transition: background-color   
- 0.3s;
-}
+    .options a {
+      font-size: 1.1em;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
 
-.options a:hover {
-  background-color: #0062cc;
-}
+    .options a:hover {
+      background: background: linear-gradient(#e66465, #9198e5);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px);
+    }
 
-/* Keyframes for animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}</style>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/copy-button/copy-button.js"></script>
+    .options a:active {
+      transform: translateY(2px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Keyframes for animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
   <div class="container">
-
     <h1>Choose an option:</h1>
-
     <div class="options">
       <a href="scan.html">Scan QR Code</a>
       <a href="generate.html">Generate QR Code</a>
     </div>
-
   </div>
 
-
-
 </body>
+
+</html>
