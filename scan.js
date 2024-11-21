@@ -33,7 +33,7 @@ domReady(function () {
     // Position the alert box at the top center of the screen
     alertElement.style.position = 'fixed';
     alertElement.style.top = '29px';
-    alertElement.style.left = '100%';
+    alertElement.style.left = '45%';
     alertElement.style.transform = 'translateX(-50%)';
 
     // Add a hanging effect using CSS animation
