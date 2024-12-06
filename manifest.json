@@ -1,6 +1,6 @@
 {
-    "name": "My PWA Webapp",
-    "short_name": "My PWA",
+    "name": "QR code app",
+    "short_name": "QR code hub",
     "icons": [
       {
         "src": "/qr-code.png",
